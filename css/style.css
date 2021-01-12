@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     border: 0;
-    box-sizing: content-box; /* tamanho do conteúdo interno */
+    box-sizing: content-box; /* tamanho da caixa se modela baseado no conteúdo interno */
     font-size: 100%;
     font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
     text-decoration: none;
@@ -19,14 +19,15 @@ li{
     margin-right: 10px;
 }
 
-
+a:hover{
+    text-decoration: underline;
+}
 
 /* IDs */
 
 /* Div PRINCIPAL */
 
 #principal{
-    /* border: 1px solid red; */
     display: flex;
     padding-bottom: 132px;
     padding-top: 80px;
@@ -36,27 +37,23 @@ li{
 /* LOGINS */
 
 #logins{
-    /* border: 1px solid red; */
-    display: block;
     text-align: left;
     padding-right: 190px;
+    width: 390px;
 }
 
 #logins img{
-    /* border: 1px solid red; */
     width: 176px;
 }
 
-#logins p:nth-child(2){
-    /* border: 1px solid red; */
+#logins h2{
     text-align: left;
     font-size: 28px;
     font-weight: 300;
     padding-left: 19px;
 }
 
-#logins p:nth-child(3){
-    /* border: 1px solid red; */
+#logins p{
     font-size: 15px;
     margin-top: 5px;
     color: #606770;
@@ -64,34 +61,30 @@ li{
 }
 
 #login-icons{
-    /* border: 1px solid red; */
     display: flex;
+    justify-content: space-between;
     margin-top: 25px;
     padding-left: 19px;
-    transition-timing-function: ease-in-out;
 }
 
 .icons{
-    /* border: 1px solid red; */
     display: block;
     border-radius: 5px;
-    margin-right: 20px;
     transition-timing-function: ease-in-out;
 }
 
 .icons:hover{
     box-shadow: 3px 3px 16px rgba(0, 0, 0, .1);
     transition-property: all;
+    cursor: pointer;
     transition-duration:0.5s;
 }
 
 .icons img{
-    /* border: 1px solid red; */
     border-radius: 5px 5px 0px 0px;
 }
 
 .name{
-    /* border: 1px solid red; */
     background-color: white;
     font-size: 16px;
     color: #606770;
@@ -102,18 +95,12 @@ li{
 
 /* FOMULÁRIO */
 
-#formulario{
-    display: block;
-}
-
 #formulario-login{
-    /* border: 1px solid red; */
     background-color: white;
     margin-top: 50px;
     width: 396px;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
-
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0px 8px 16px rgba(0, 0, 0, .1);
 }
 
 .text_box{
@@ -133,8 +120,7 @@ li{
 #bt_entrar{
     background-color: #1877f2;
     margin-top: 15px;
-    width: 360px;
-    height: 50px;
+    padding: 14px 150px;
     border-radius: 6px;
     font-weight: 700;
     font-size: 20px;
@@ -153,18 +139,12 @@ li{
     font-size: 14px;
 }
 
-#esqueceu_pw:hover{
-    text-decoration: underline;
-}
-
 #esqueceu_pw a{
     color: #1877f2;
 }
 
 #hr_formulario{
-    justify-content: center;
-    margin: 22px 5px 5px 18px;
-    width: 360px;
+    margin: 10px 22px;
     border-top: 1px solid #d3d3d3;
 }
 
@@ -172,8 +152,7 @@ li{
     background-color: #36a420;
     margin-top: 20px;
     margin-bottom: 25px;
-    width: 180px;
-    height: 50px;
+    padding: 14px 10px;
     border-radius: 6px;
     font-weight: 700;
     font-size: 20px;
@@ -195,24 +174,20 @@ li{
 /* FOOTER */
 
 #_footer{
-    /* border: 1px solid red; */
     background-color: white;
-    display: block;
     text-align: center;
     height: 200px;
+    padding: 0px 100px;
 }
 
 #hr_footer{
-    /* border: 1px solid red; */
-    margin: 8px 150px 0px 150px;
-    /* width: 840px; */
+    margin-top: 5px;
     border-top: 1px solid #d3d3d3;
 }
 
 /* IDIOMAS */
 
 #idiomas{
-    /* border: 1px solid red; */
     padding-top: 10px;
     display: flex;
     font-size: 12px;
@@ -221,10 +196,8 @@ li{
 }
 
 #adicionar_idioma{
-    /* border: 1px solid red; */
-    width: 25px;
+    padding: 0px 10px;
     font-size: 14px;
-    border-style: none;
     color: #8a8d91; 
     border: 1px solid#c7c8c9;
     margin-left: 10px;
@@ -233,9 +206,6 @@ li{
 /* BOX LINKS */
 
 #box_links{
-    /* border: 1px solid red; */
-
-    box-sizing: border-box;
     margin-top: 10px;
     font-size: 12px;
     line-height: 1.6;
@@ -243,13 +213,6 @@ li{
 }
 
 #box_links a{
-    /* border: 1px solid red; */
-    text-decoration: none;
-    color: #8a8d91;
+    color: inherit;
     padding-right: 5px;
-    white-space: pre-line;
-}
-
-#box_links a:hover{
-    text-decoration: underline;
 }
